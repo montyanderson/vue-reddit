@@ -1,0 +1,30 @@
+{
+  "name": "vue-reddit",
+  "version": "1.0.0",
+  "description": "Reddit client made with Vue",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "browserify -t vueify -e src/index.js | babel-minify --mangle false > public/bundle.js",
+    "dev": "watchify -t vueify -e src/index.js -o public/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/montyanderson/vue-reddit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/montyanderson/vue-reddit/issues"
+  },
+  "homepage": "https://github.com/montyanderson/vue-reddit#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-minify": "^0.5.0",
+    "browserify": "^16.2.3",
+    "vue": "^2.5.17",
+    "vue-router": "^3.0.2",
+    "vueify": "^9.4.1",
+    "watchify": "^3.11.0"
+  }
+}
